@@ -36,7 +36,7 @@ DLL stands for Dynamic Link Library; it is Microsoft's implementation of a share
 ![Picture of Compilation Process](https://i.stack.imgur.com/ZWg39.png)
 
 ### What is DLL Injection?
-DLL Injection is the technique where attackers can run code in the address code of another process by forcing it to load a dynamic-link library. In effect, it allows the attacker to run arbitrary code in arbitrary processes. On Windows, there are multiple ways to do this: changing the DLLs listed in the registry entry `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLL`, changing the DLLS listed in the registry key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCertDLLs`, and throug process manipulation functions in the Windows API such as CreateRemoteThread, which we will use with our DLL Injector.
+DLL Injection is the technique where attackers can run code in the address code of another process by forcing it to load a dynamic-link library. In effect, it allows the attacker to run arbitrary code in arbitrary processes. On Windows, there are multiple ways to do this: changing the DLLs listed in the registry entry `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLL`, changing the DLLS listed in the registry key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCertDLLs`, and through process manipulation functions in the Windows API such as CreateRemoteThread, which we will use with our DLL Injector.
 
 ### Injection Process
 The [CreateRemoteThread](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) function in the Windows API enables us to arbitrarily create a thread in the virtual address space of another process. Thus, we simply have to create a thread in the target process (csgo.exe) that loads our dll into memory. 
@@ -60,13 +60,13 @@ Here is an overview of the classes and their respective member functions that ar
 ---
 
 ## Essential Links
-- [Cyber Discord]()
-- [Cyber Linktree]()
+- [Cyber Discord](https://discord.gg/j9dgf2q)
+- [Cyber Linktree](https://linktr.ee/uclacyber)
 - [Studio Discord](https://discord.com/invite/bBk2Mcw)
 - [Studio Linktree](https://linktr.ee/acmstudio)
 - [ACM Membership Portal](https://members.uclaacm.com/)
 ## Additional Resources
-- [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
+- [Source Engine SDK](https://github.com/ValveSoftware/source-sdk-2013)
 - [ACM Website](https://www.uclaacm.com/)
 - [ACM Discord](https://discord.com/invite/eWmzKsY)
  
