@@ -82,21 +82,25 @@ In this code snippet, the this pointer is a pointer to our LocalPlayer object in
 
 
 ## TODOs
-Because this boilerplate code is meant to teach the techniques for making an aimbot, several functions are incomplete and are marked TODO. The purpose of these functions is outlined below.
+Because this boilerplate code is meant to teach the techniques for making an aimbot, several functions are incomplete and are marked TODO. The purpose of these functions is outlined below. Almost all the functions are written out on the slides if you are stuck.
 
 ### LocalPlayer::GetDistance
+Given the Vector3 indicating something´s position, return the distance between the LocalPlayer and the other Vector3. HINT: how do you find the distance between two points?
 
 ### LocalPlayer::AimAt
+Given the Vector3 of the target we want to aim at and the viewangles, change the viewangles such that the player now looks toward the target. See slides for details on pitch and yaw.
 
 ### Player::GetPlayer
+Given the entitylist location and the Player's index in the list, return the Player's pointer.
 
 ### Player::GetBonePos
+Given the boneMatrix start position and the specific boneId we are looking for, return a Vector3 containing the x, y, and y coordinates of the specific bone. Note that the offset to the x coordinate in the bone matrix is 0xC. HINT: What is the size of a bonematrix? What is the offset to the y and z positions?
 
 ### GetClosestEnemy
+Loop through all the enemies in the entity list (ie ignoring friendly players, dead players and yourself). Then get the enemy with the least distance between itself and the player and return the enemy.
 
 ### Run
-
-### AimAt
+Get the closest available enemy. If it exists, then aim at it. This function should be fairly simple if everything else has been propely implemented.
 
 ---
 
