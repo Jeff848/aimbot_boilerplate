@@ -55,7 +55,31 @@ Finally, we call [CreateRemoteThread](https://docs.microsoft.com/en-us/windows/w
 ### Classes and Functions
 ![image](https://user-images.githubusercontent.com/25162602/141064941-d2681469-753f-4d7e-9b2d-3482545d5843.png)
 
-Here is an overview of the classes and their respective member functions that are present in this project. Not included here are Offsets header file which has all of the CSGO offsets from [hazedumper](https://github.com/frk1/hazedumper), and the Source.c and Source.h files which contain our DLL boilerplate code and a Run function for calling while the cheat is running.
+Here is an overview of the classes and their respective member functions that are present in this project. Not included in the diagram are Offsets header file which has all of the CSGO offsets from [hazedumper](https://github.com/frk1/hazedumper), and the Source.c and Source.h files which contain our DLL boilerplate code and a Run function for calling while the cheat is running.
+
+### DllMain (Source.c)
+Source.c contains our DllMain code, which serves as an entrypoint into the dll code when the dll is loaded into the process. In the case that it is attached to a process, we call a OnDllAttach function, which launches a console for testing purposes, and calls the Run function in an infinite loop which can be stopped when the delete key is entered. Once stopped, the Dll unloads itself and terminates all threads.
+
+### Run (Source.h)
+Run gets the target we want to aim at (closest enemy player) and aims at them, using various static and member functions of the LocalPlayer and Player classes. The details for the implementation of the Run function and its helper function, GetClosestEnemy, are detailed in the TODO section below.
+
+### hazedumper (Offsets.h)
+The hazedumper namespace contains all of the offsets we need to find the locations of player ViewAngle, player VectorOrigin, etc. in memory. See pointer magic below.
+
+### LocalPlayer
+A class that represents you the player. Has some important functions such as GetDistance and AimAt which will be needed for implementing the Run function.
+
+### Player
+A class that represents other players. Other than the functions universal to both LocalPlayer and Player, has a function to get the Bone Position of a specific bone in the BoneMatrix. This is needed for aiming at enemy heads.
+
+### Vector3
+Simple class for a tuple of floats. Vector3s can represent where things are in 3D space, and are thus needed for our calculations for aiming the bot.
+
+### Pointer magic
+
+
+## TODOs
+Because this boilerplate code is meant to teach the techniques for making an aimbot, several functions are incomplete and are marked TODO. The purpose of these functions is outlined below.
 
 ---
 
