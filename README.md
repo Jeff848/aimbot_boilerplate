@@ -78,6 +78,8 @@ Simple class for a tuple of floats. Vector3s can represent where things are in 3
 ### Pointer magic
 The code below shows the general process of getting a pointer to a value in memory.
 
+![image](https://user-images.githubusercontent.com/25162602/141227111-d1cbc290-fe8c-465d-8a98-8b3cf6f96a71.png)
+
 In this code snippet, the this pointer is a pointer to our LocalPlayer object in memory (obtained with the Get method). After casting this to a uintptr_t pointer type (generic 32 bit pointer), we can then dereference it to get to the actual LocalPlayer data structure in memory. Then, by adding the hazedumper offset for the Vector Origin, we can then find the pointer to the LocalPlayer's Vector Origin, which is a Vector3.
 
 
