@@ -4,7 +4,7 @@
 **Location**: Faraday Room 67-124 (Engineering IV)<br>
  
 ## Resources
-[Slides]()<br>
+[Slides](https://docs.google.com/presentation/d/1li6a8AF9a851l0snFQvIAGgV66ay-ndBpFPURC49bVA/edit?usp=sharing)<br>
 [Video]()
  
 ## Topics Covered
