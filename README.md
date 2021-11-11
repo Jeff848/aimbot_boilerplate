@@ -76,10 +76,27 @@ A class that represents other players. Other than the functions universal to bot
 Simple class for a tuple of floats. Vector3s can represent where things are in 3D space, and are thus needed for our calculations for aiming the bot.
 
 ### Pointer magic
+The code below shows the general process of getting a pointer to a value in memory.
+
+In this code snippet, the this pointer is a pointer to our LocalPlayer object in memory (obtained with the Get method). After casting this to a uintptr_t pointer type (generic 32 bit pointer), we can then dereference it to get to the actual LocalPlayer data structure in memory. Then, by adding the hazedumper offset for the Vector Origin, we can then find the pointer to the LocalPlayer's Vector Origin, which is a Vector3.
 
 
 ## TODOs
 Because this boilerplate code is meant to teach the techniques for making an aimbot, several functions are incomplete and are marked TODO. The purpose of these functions is outlined below.
+
+### LocalPlayer::GetDistance
+
+### LocalPlayer::AimAt
+
+### Player::GetPlayer
+
+### Player::GetBonePos
+
+### GetClosestEnemy
+
+### Run
+
+### AimAt
 
 ---
 
